@@ -1,0 +1,207 @@
+/*стили для слайдера*/
+/* стили основного контейнера слайдера */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%;
+      /*margin-top: 40px;*/
+      /*height: 700px;*/
+    }
+
+    /* стили для обёртки, в которой заключены слайды */
+    .slider__wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* стили для контейнера слайдов */
+    .slider__items {
+      display: flex;
+      transition: transform 0.6s ease;
+      width: 100%;
+    }
+
+    /* стили для слайдов */
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    /* стили для кнопок "вперед" и "назад" */
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      height: 300px;
+      color:#fff;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+
+    .slider__control_prev {
+      left: 0;
+    }
+
+    .slider__control_next {
+      right: 0;
+    }
+
+    .slider__control::before {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+
+    /* стили для индикаторов */
+    .slider__indicators {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 15%;
+      margin-left: 15%;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .slider__indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 4px;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+		/*#e75e11 - orange*/
+      background-color: var(--body-color);
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    .slider__indicators li.active {
+      background-color: #fff;
+    }
+
+    .img-fluid {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+      /*margin-bottom: 100px;*/
+    }
+/*стили для слайдера*/
+
+#reader{
+  height: 100%;
+  margin-left: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#reader h1{
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.over{
+  width: 100%
+}
+.over > img{
+  width: 100%;
+}
+@media (max-width: 950px) {
+    .slider{
+      width: 80%;
+    }
+    #reader h1{
+      font-size: 20px;
+    }
+}
+@media (max-width: 650px) {
+    .slider{
+        width: 100%;
+    }
+}
+
+
+#chapter{
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow-y: scroll;
+    background-color: var(--sidebar-color);
+    z-index: 100000;
+    height: 100%;
+    display: none;
+}
+#chapter p a{
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 10px;
+}
+#chapter p a:hover{
+    color: var(--body-color);
+}
+#chapter h1{
+    margin: 10px;
+    color: var(--body-color);
+}
+#close_chapter{
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    color: var(--body-color);
+    background-color: var(--sidebar-color);
+    border: none;
+}
+#close_chapter i{
+    color: var(--body-color);
+}
+.active_chapter{
+  color: var(--body-color);
+}
+#chapter_but{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--sidebar-color);
+  font-size: 16px;
+  font-family: One;
+}
